@@ -1,4 +1,4 @@
-import { Router, response } from 'express';
+import { Router } from 'express';
 import { ConversationService } from './services/ConversationService';
 import { CreateSession } from './services/CreateSession';
 
