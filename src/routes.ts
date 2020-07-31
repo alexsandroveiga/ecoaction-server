@@ -1,8 +1,12 @@
-import { Router } from 'express';
+import { Router, response } from 'express';
 import { ConversationService } from './services/ConversationService';
 import { CreateSession } from './services/CreateSession';
 
 const router = Router();
+
+router.get('/', (request, response) => {
+  return response.json({ message: 'Welcome to EcoAction Bot API' });
+});
 
 router.post('/conversation', async (request, response) => {
   const { text, session_id, assistant_id } = request.body;
